@@ -604,8 +604,14 @@ footer {
 }
 
 .gallery__item-img {
+  display: block;
+  height: 0;
   width: 100%;
-  vertical-align: middle;
+  padding-bottom: 55%;
+  background-color: transparent;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .gallery-item-popup__inner {

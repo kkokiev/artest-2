@@ -18,6 +18,8 @@
 	&__item-img-wrap {
 		position: relative;
 		display: block;
+		// height: 0;
+		// padding-bottom: 55%;
 	}
 
 	&__item-img-overlay {
@@ -54,8 +56,11 @@
 	}
 
 	&__item-img {
+		display: block;
+		height: 0;
 		width: 100%;
-		vertical-align: middle;
+		padding-bottom: 55%;
+		@include bg-image(transparent, center center, cover);
 	}
 
 
