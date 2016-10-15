@@ -1,0 +1,38 @@
+.content-bg-slider {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	z-index: 1;
+
+	&__inner {
+		position: relative;
+		height: 100%;
+	}
+
+	&__body {
+		height: 100%;
+	}
+
+	&__slide {
+		height: 100%;
+		width: 100%;
+		@include bg-image (transparent, center center, cover);
+	}
+
+	&__overlay {
+		position: absolute;
+		top: 0;
+		left: 0;
+		height: 100%;
+		width: 100%;
+		background: #fff;
+		opacity: .85;
+	}
+
+	.slick-list,
+	.slick-track {
+		height: 100%;
+	}
+}

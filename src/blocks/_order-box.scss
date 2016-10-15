@@ -1,0 +1,11 @@
+.order-box {
+	@include clearfix();
+
+	&__col {
+		width: 50%;
+	}
+
+	&__gallery-wrap {
+		padding-right: 10%;
+	}
+}
