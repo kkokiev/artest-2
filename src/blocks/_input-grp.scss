@@ -12,8 +12,16 @@
 		overflow: hidden;
 		text-overflow: ellipsis;
 
+		@include breakpoint(max-width 600px) {
+			width: 100px;
+		}
+
 		&_width-60 {
 			width: 60px;
+
+			@include breakpoint(max-width 600px) {
+				width: 100px;
+			}
 		}
 
 		&_alt-lh {
@@ -25,7 +33,11 @@
 		}
 
 		&_padding-left {
-			padding-left: 40px
+			padding-left: 40px;
+
+			@include breakpoint(max-width 1350px) {
+				padding-left: 0;
+			}
 		}
 	}
 
@@ -52,6 +64,10 @@
 				border: 1px solid $border;
 				background-image: url(../img/jq-selectbox__select.png);
 				@include bg-image($light, 7px center, 53px 31px);
+
+				@include breakpoint(max-width 600px) {
+					width: 100%;
+				}
 			}
 
 			.jq-selectbox__select-text {

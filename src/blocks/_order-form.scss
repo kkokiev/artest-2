@@ -2,8 +2,16 @@
 	padding-left: 50px;
 	padding-right: 17%;
 
+	@include breakpoint(max-width 1350px) {
+		padding-right: 0;
+	}
+
+	@include breakpoint(max-width 1000px) {
+		padding-left: 0;
+	}
+
 	&__input-box {
-		margin-bottom: 50px;
+		margin-bottom: 56px;
 	}
 
 	&__row {
@@ -23,11 +31,30 @@
 		float: left;
 		width: 200px;
 		max-width: 100%;
+
+		@include breakpoint(max-width 600px) {
+			float: none;
+			width: 100%;
+			margin-bottom: 16px;
+
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
 	}
 
 	&__date-col {
 		float: left;
 		width: 50%;
+
+		@include breakpoint(max-width 1350px) {
+			width: 100%;
+			margin-bottom: 21px;
+
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
 	}
 
 	&__options-box {
@@ -35,10 +62,10 @@
 	}
 
 	&__option-title {
-		margin-bottom: 14px;
+		margin-bottom: 24px;
 		text-transform: uppercase;
 		font-size: 1.231em;
-		line-height: 2.308em;
+		line-height: 1.2em;
 		font-weight: 500;
 	}
 

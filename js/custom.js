@@ -110,7 +110,9 @@ $(function(){
 		var $el = $('.js-input-grp__date');
 
 		if($el.length){
-			$el.datepicker();
+			$el.datepicker({
+				dateFormat: 'dd-mm-yy'
+			});
 		};
 
 	})();

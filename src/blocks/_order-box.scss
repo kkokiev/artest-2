@@ -4,9 +4,23 @@
 	&__col {
 		float: left;
 		width: 50%;
+
+		@include breakpoint(max-width 1000px) {
+			float: none;
+			width: 100%;
+		}
+	}
+
+	&__info-wrap {
+		margin-bottom: 35px;
 	}
 
 	&__gallery-wrap {
 		padding-right: 10%;
+
+		@include breakpoint(max-width 1000px) {
+			padding-right: 0;
+			margin-bottom: 25px;
+		}
 	}
 }

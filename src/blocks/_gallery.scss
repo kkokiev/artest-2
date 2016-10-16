@@ -1,7 +1,13 @@
 .gallery {
 
 	&__header {
+		margin-bottom: 22px;
+	}
 
+	&__title {
+		margin: 0;
+		font-size: 1.231em;
+		line-height: 1.2em;
 	}
 
 	&__body {
@@ -13,13 +19,20 @@
 		float: left;
 		padding: 0 10px;
 		width: 33.333333%;
+
+		@include breakpoint(max-width 600px) {
+			width: 50%;
+		}
+	}
+
+	&__item {
+		margin-bottom: 12px;
 	}
 
 	&__item-img-wrap {
 		position: relative;
 		display: block;
-		// height: 0;
-		// padding-bottom: 55%;
+		margin-bottom: 5px;
 	}
 
 	&__item-img-overlay {
@@ -61,6 +74,20 @@
 		width: 100%;
 		padding-bottom: 55%;
 		@include bg-image(transparent, center center, cover);
+	}
+
+	&__item-info {
+		margin: 0;
+		font-size: 1.1em;
+		line-height: 2.308em;
+		font-weight: 300;
+		white-space: nowrap;
+
+
+		[class*='icon-'] {
+			font-size: 1.7em;
+			vertical-align: middle;
+		}
 	}
 
 
