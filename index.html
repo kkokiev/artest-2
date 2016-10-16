@@ -7,6 +7,8 @@
 	<title>Lublu-no - Order page</title>
 	<link rel="stylesheet" type="text/css" href="lib/slick/slick.css" />
 	<link href="lib/fancybox/jquery.fancybox.css" rel="stylesheet">
+	<link href="lib/jqueryformstyler/jquery.formstyler.css" rel="stylesheet">
+	<link href="lib/jquery-ui/jquery-ui.min.css" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="css/style.css" />		
 	<!--[if lt IE 9]><script src="js/html5.js"></script><![endif]-->		
 </head>
@@ -46,7 +48,7 @@
 							</p>
 
 							<p>
-								Если у вас возникли вопросы или трудности в ходе бронирования – звоните нам по номеру <a href="te:+74953510029">+7 (495) 351-00-29</a>
+								Если у вас возникли вопросы или трудности в ходе бронирования – звоните нам по номеру <a href="te:+74953510029" class="link">+7 (495) 351-00-29</a>
 							</p>
 						</div>
 
@@ -170,6 +172,139 @@
 
 					<div class="order-box__col">
 						
+						<form action="" class="order-form">
+							
+							<div class="order-form__input-box">
+								<div class="order-form__row">
+									<div class="input-grp">
+										<label for="order-form-room-select" class="input-grp__label input-grp__label_alt-lh">Тип номера</label>
+										<div class="input-grp__input-wrap input-grp__input-wrap_select">
+											<select id="order-form-room-select" class="input-grp__select styled">
+												<option value="1" class="input-grp__option">(эконом)</option>
+												<option value="2" class="input-grp__option">(полулюкс)</option>
+												<option value="3" class="input-grp__option">(люкс)</option>
+											</select>
+										</div>
+									</div>
+								</div>
+
+								<div class="order-form__row">
+									
+									<div class="order-form__select-col">
+										<div class="input-grp">
+											<label for="order-form-adult-number" class="input-grp__label input-grp__label_alt-lh2">Взрослые</label>
+											<div class="input-grp__input-wrap input-grp__input-wrap_small-select">
+												<select id="order-form-adult-number" class="input-grp__select styled">
+													<option value="1" class="input-grp__option">1</option>
+													<option value="2" class="input-grp__option">2</option>
+													<option value="3" class="input-grp__option">33</option>
+												</select>
+											</div>
+										</div>
+									</div>
+
+									<div class="order-form__select-col">
+
+										<div class="input-grp">
+											<label for="order-form-kids-number" class="input-grp__label input-grp__label_width-60 input-grp__label_alt-lh2">Дети</label>
+											<div class="input-grp__input-wrap input-grp__input-wrap_small-select">
+												<select id="order-form-kids-number" class="input-grp__select styled">
+													<option value="1" class="input-grp__option">1</option>
+													<option value="2" class="input-grp__option">2</option>
+													<option value="3" class="input-grp__option">3</option>
+												</select>
+											</div>
+										</div>
+
+									</div>
+								</div>
+
+								<div class="order-form__row order-form__row_alt">
+
+									<div class="order-form__date-col">
+										<div class="input-grp">
+											<label for="order-form-checkin" class="input-grp__label">Заезд</label>
+											<div class="input-grp__input-wrap">
+												<input type="text" id="order-form-checkin" class="input-grp__input input-grp__input_date js-input-grp__date">
+											</div>
+										</div>
+									</div>
+
+									<div class="order-form__date-col">
+										<div class="input-grp">
+											<label for="order-form-checkout" class="input-grp__label input-grp__label_padding-left">Отъезд</label>
+											<div class="input-grp__input-wrap">
+												<input type="text" id="order-form-checkout" class="input-grp__input input-grp__input_date js-input-grp__date">
+											</div>
+										</div>
+									</div>
+								</div>
+
+								<div class="order-form__row order-form__row_alt">
+									<div class="input-grp">
+										<label for="order-form-email" class="input-grp__label">E-mail</label>
+										<div class="input-grp__input-wrap">
+											<input type="email" id="order-form-email" class="input-grp__input">
+										</div>
+									</div>
+								</div>
+
+								<div class="order-form__row">
+									<div class="input-grp">
+										<label for="order-form-phone" class="input-grp__label">Телефон</label>
+										<div class="input-grp__input-wrap">
+											<input type="tel" id="order-form-phone" class="input-grp__input">
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<div class="order-form__options-box">
+								<h2 class="order-form__option-title">Дополнительные услуги</h2>
+								<ul class="order-form__options-list">
+
+									<li class="order-form__options-list-item">
+										<div class="checkbox">
+											<input type="checkbox" id="order-chck-1" class="checkbox__input">
+											<label for="order-chck-1" class="checkbox__label">Бизнес ланч</label>
+										</div>
+									</li>
+
+									<li class="order-form__options-list-item">
+										<div class="checkbox">
+											<input type="checkbox" id="order-chck-2" class="checkbox__input" checked>
+											<label for="order-chck-2" class="checkbox__label">Ужин</label>
+										</div>
+									</li>
+
+									<li class="order-form__options-list-item">
+										<div class="checkbox">
+											<input type="checkbox" id="order-chck-3" class="checkbox__input">
+											<label for="order-chck-3" class="checkbox__label">Полдник</label>
+										</div>
+									</li>
+
+									<li class="order-form__options-list-item">
+										<div class="checkbox">
+											<input type="checkbox" id="order-chck-4" class="checkbox__input" checked>
+											<label for="order-chck-4" class="checkbox__label">Шампанское</label>
+										</div>
+									</li>
+
+								</ul>
+							</div>
+
+							<div class="order-form__submit-box">
+								<p class="order-form__price">
+									Итого
+									<span>26 400 р.</span>
+								</p>
+
+								<input type="submit" class="order-form__submit" value="Заказать">
+							</div>
+
+						</form>
+
 					</div>
 				</div><!-- /.order-box -->
 
@@ -210,6 +345,8 @@
 	<script type="text/javascript" src="js/jquery-migrate.min.js" ></script>
 	<script type="text/javascript" src="lib/slick/slick.min.js" ></script>
 	<script src="lib/fancybox/jquery.fancybox.pack.js"></script>
+	<script src="lib/jqueryformstyler/jquery.formstyler.min.js"></script>
+	<script src="lib/jquery-ui/jquery-ui.min.js"></script>
 	<script type="text/javascript" src="js/custom.js" ></script>
 </body>
 </html>

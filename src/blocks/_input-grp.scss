@@ -1,0 +1,154 @@
+.input-grp {
+	@include clearfix();
+
+	&__label {
+		position: relative;
+		z-index: 1;
+		float: left;
+		width: 111px;
+		font-size: 1.231em;
+		line-height: 2.308em;
+		white-space: nowrap;
+		overflow: hidden;
+		text-overflow: ellipsis;
+
+		&_width-60 {
+			width: 60px;
+		}
+
+		&_alt-lh {
+			line-height: 2.9em;
+		}
+
+		&_alt-lh2 {
+			line-height: 2em;
+		}
+
+		&_padding-left {
+			padding-left: 40px
+		}
+	}
+
+	&__input-wrap {
+		position: relative;
+		float: left;
+		width: 100%;
+		margin-left: -111px;
+		padding-left: 111px;
+
+
+		&_select {
+
+			.jq-selectbox__select {
+				overflow: hidden;
+				height: 2.8125em;
+				width: 210px;
+				max-width: 100%;
+				padding-left: 70px;
+				font-family: $font;
+				font-size: 1.231em;
+				line-height: 2.8em;
+				border-radius: 0;
+				border: 1px solid $border;
+				background-image: url(../img/jq-selectbox__select.png);
+				@include bg-image($light, 7px center, 53px 31px);
+			}
+
+			.jq-selectbox__select-text {
+				max-width: 100%;
+			}
+
+			.jq-selectbox__trigger {
+				border-left: 0;
+
+				&:after {
+					content: "\e91b";
+					font-family: $icon-font;
+					font-size: .8em;
+					position: absolute;
+					top: 50%;
+					right: -5px;
+					margin-top: -3px;
+					display: block;
+					height: 12px;
+					width: 12px;
+					color: #9a9a9a;
+					-weblit-transform: rotate(90deg);
+					-moz-transform: rotate(90deg);
+					-ms-transform: rotate(90deg);
+					-o-transform: rotate(90deg);
+					transform: rotate(90deg);
+				}
+			}
+
+			.jq-selectbox__trigger-arrow {
+				display: none;
+			}
+		}
+
+		&_small-select {
+			.jq-selectbox__select {
+				overflow: hidden;
+				height: 2.1em;
+				width: 61px;
+				max-width: 61px;
+				padding-left: 14px;
+				padding-right: 23px;
+				font-family: $font;
+				font-size: 1.231em;
+				line-height: 2em;
+				border-radius: 0;
+				border: 1px solid $border;
+				background: $light;
+			}
+
+			.jq-selectbox__select-text {
+				max-width: 100%;
+			}
+
+			.jq-selectbox__trigger {
+				width: 23px;
+				border-left: 0;
+
+				&:after {
+					content: "\e91b";
+					font-family: $icon-font;
+					font-size: .8em;
+					position: absolute;
+					top: 50%;
+					right: -1px;
+					margin-top: -3px;
+					display: block;
+					height: 12px;
+					width: 12px;
+					color: #9a9a9a;
+					-weblit-transform: rotate(90deg);
+					-moz-transform: rotate(90deg);
+					-ms-transform: rotate(90deg);
+					-o-transform: rotate(90deg);
+					transform: rotate(90deg);
+				}
+			}
+
+			.jq-selectbox__trigger-arrow {
+				display: none;
+			}
+		}
+	}
+
+	&__input {
+		height: 36px;
+		width: 100%;
+		padding: 0 5px;
+		font-family: $font;
+		font-size: 1.231em;
+		border: 1px solid $border;
+
+		&_date {
+			padding-right: 32px;
+			background-image: url(../img/input-grp__input_date.png);
+			@include bg-image($light, right 3px center, 26px 26px);
+		}
+	}
+
+}

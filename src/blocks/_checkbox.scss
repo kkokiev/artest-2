@@ -1,0 +1,85 @@
+.checkbox {
+	position: relative;
+
+	&__label {
+		display: inline-block;
+		vertical-align: top;
+		max-width: 100%;
+		overflow: hidden;
+		white-space: nowrap;
+		text-overflow: ellipsis;
+		padding-left: 30px;
+		padding-right: 9px;
+		font-size: 1.231em;
+		line-height: 1.9em;
+		text-transform: lowercase;
+		cursor: pointer;
+		@include transition(background, .3s, ease-in);
+	}
+
+	&__input:not(:checked),
+	&__input:checked {
+		position: absolute;
+		left: -9999px;
+	}
+
+	&__input:hover + label,
+	&__input:focus + label {
+		background: rgba(#aa4141, .5);
+	}
+
+	&__input:checked + label {
+		color: $light;
+		background: #aa4141;
+	}
+	
+	&__input:checked:hover + label,
+	&__input:checked:focus + label {
+		background: darken(#aa4141, 20%);
+	}
+
+	// checkbox aspect 
+	&__input:not(:checked) + label:before,
+	&__input:checked + label:before {
+		content: '';
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		margin: auto 0;
+		left: 15px;
+		display: block;
+		height: 10px;
+		width: 10px;
+		border: 2px solid $border;
+		border-radius: 50%;
+	}
+
+	&__input:not(:checked) + label:after,
+	&__input:checked + label:after {
+		content: '\e91c';
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		margin: auto 0;
+		left: 11px;
+		display: block;
+		height: 16px;
+		width: 16px;
+		font-family: $icon-font;
+		font-size: .8em;
+		line-height: 1.2em;
+		color: #d4d4d4;
+	}
+
+	&__input:not(:checked) + label:after {
+		opacity: 0;
+	}
+
+	&__input:checked + label:before {
+		opacity: 0;
+	}
+
+	&__input:checked + label:after {
+		opacity: 1;
+	}
+}

@@ -87,6 +87,32 @@ $(function(){
 				padding: 0
 			});
 		};
+
+	})();
+
+
+	/*setup styler*/
+	var styledForms = (function() {
+
+		var $el = $('.styled');
+
+		if($el.length){
+			$el.styler();
+		};
+
+
+	})();
+
+
+	/*setup jq-ui datepicker*/
+	var orderDatePicker = (function() {
+
+		var $el = $('.js-input-grp__date');
+
+		if($el.length){
+			$el.datepicker();
+		};
+
 	})();
 
 
