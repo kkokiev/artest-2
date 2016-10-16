@@ -1,0 +1,69 @@
+.footer {
+	@include clearfix();
+	padding-bottom: 26px;
+
+	&__left-col {
+		float: left;
+		width: 50%;
+
+		@include breakpoint(max-width 768px) {
+			float: none;
+			width: 100%;
+			margin-bottom: 10px;
+			text-align: center;
+		}
+	}
+
+	&__right-col {
+		float: right;
+		width: 50%;
+		text-align: right;
+
+		@include breakpoint(max-width 768px) {
+			float: none;
+			width: 100%;
+			text-align: center;
+		}
+	}
+
+	&__phone-wrap {
+		display: inline-block;
+		vertical-align: top;
+		margin-right: 30px;
+
+		@include breakpoint(max-width 480px) {
+			display: block;
+			margin-bottom: 10px;
+		}
+	}
+
+	&__social-wrap {
+		display: inline-block;
+		margin-right: -4px;
+		vertical-align: top;
+	}
+
+	&__list {
+		display: inline-block;
+		padding-top: 15px;
+		margin-right: -4px;
+	}
+
+	&__list-item {
+		display: inline-block;
+		margin-right: 11px;
+
+		&:last-child {
+			margin-right: -4px;
+		}
+	}
+
+	&__list-link {
+		font-size: 1.077em;
+
+		&:hover,
+		&:focus {
+			text-decoration: underline;
+		}
+	}
+}

@@ -6,7 +6,7 @@ $(window).load(function(){
 });
 /* viewport width */
 function viewport(){
-	var e = window, 
+	var e = window,
 		a = 'inner';
 	if ( !( 'innerWidth' in window ) )
 	{
@@ -17,14 +17,14 @@ function viewport(){
 };
 /* viewport width */
 $(function(){
-	/* placeholder*/	   
+	/* placeholder*/
 	$('input, textarea').each(function(){
- 		var placeholder = $(this).attr('placeholder');
- 		$(this).focus(function(){ $(this).attr('placeholder', '');});
- 		$(this).focusout(function(){			 
- 			$(this).attr('placeholder', placeholder);  			
- 		});
- 	});
+		var placeholder = $(this).attr('placeholder');
+		$(this).focus(function(){ $(this).attr('placeholder', '');});
+		$(this).focusout(function(){
+			$(this).attr('placeholder', placeholder);
+		});
+	});
 	/* placeholder*/
 
 	$('.button-nav').click(function(){
@@ -38,8 +38,8 @@ $(function(){
 
 var handler = function(){
 	
-	var height_footer = $('footer').height();	
-	var height_header = $('header').height();	
+	var height_footer = $('footer').height();
+	var height_header = $('header').height();
 	$('.content').css({'padding-bottom':height_footer+40, 'padding-top':height_header+40});
 	
 	

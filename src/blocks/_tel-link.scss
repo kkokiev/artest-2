@@ -1,0 +1,39 @@
+.tel-link {
+	display: inline-block;
+	font-size: 1.385em;
+	font-weight: 300;
+	line-height: 1.666666em;
+	white-space: nowrap;
+
+	&__icon {
+		display: inline-block;
+		height: 30px;
+		width: 30px;
+		margin-right: 5px;
+		text-align: center;
+		vertical-align: middle;
+		border: 1px solid #383838;
+		border-radius: 50%;
+		@include transition(all, .3s, ease-in);
+
+		[class*='icon-'] {
+			position: relative;
+			top: -2px;
+			font-size: .8em;
+			color: #383838;
+		}
+	}
+
+	&__medium {
+		font-weight: 500;
+	}
+
+	&:hover,
+	&:focus {
+		text-decoration: underline;
+
+		.tel-link__icon {
+			background: #aa4141;
+		}
+	}
+}

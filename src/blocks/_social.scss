@@ -1,0 +1,58 @@
+.social {
+	@include clearfix()
+	list-style: none;
+
+	&__item {
+		float: left;
+		margin-right: 10px;
+		text-align: center;
+
+		&:last-child {
+			margin-right: 0;
+		}
+
+	}
+
+	&__link {
+		display: inline-block;
+		height: 32px;
+		width: 32px;
+		border: 1px solid $main;
+		vertical-align: top;
+
+		[class*='icon-'] {
+			position: relative;
+			@include transition(all, .3s, ease-in);
+		}
+
+		&_fb {
+			[class*='icon-'] {
+				top: 7px;
+				font-size: 1.5em;
+			}
+		}
+
+		&_vk {
+			[class*='icon-'] {
+				top: 10px;
+				font-size: 1em;
+			}
+		}
+
+		&_instagram {
+			[class*='icon-'] {
+				top: 8px;
+				font-size: 1.2em;
+			}
+		}
+
+		&:hover,
+		&:focus {
+			background: #aa4141;
+
+			[class*='icon-'] {
+				color: $light;
+			}
+		}
+	}
+}
