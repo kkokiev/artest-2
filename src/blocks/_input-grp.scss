@@ -162,8 +162,20 @@
 
 		&_date {
 			padding-right: 32px;
-			background-image: url(../img/input-grp__input_date.png);
-			@include bg-image($light, right 3px center, 26px 26px);
+		}
+	}
+
+	&__date-icon {
+		position: absolute;
+		display: block;
+		top: 5px;
+		right: 4px;
+		height: 26px;
+		width: 26px;
+		cursor: pointer;
+
+		[class*='icon-'] {
+			font-size: 2em;
 		}
 	}
 

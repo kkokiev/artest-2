@@ -1026,11 +1026,20 @@ footer {
 
 .input-grp__input_date {
   padding-right: 32px;
-  background-image: url(../img/input-grp__input_date.png);
-  background-color: #fff;
-  background-position: right 3px center;
-  background-repeat: no-repeat;
-  background-size: 26px 26px;
+}
+
+.input-grp__date-icon {
+  position: absolute;
+  display: block;
+  top: 5px;
+  right: 4px;
+  height: 26px;
+  width: 26px;
+  cursor: pointer;
+}
+
+.input-grp__date-icon [class*='icon-'] {
+  font-size: 2em;
 }
 
 .link {
