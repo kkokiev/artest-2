@@ -57,6 +57,8 @@ $(window).bind('resize', handler);
 
 $(function(){
 
+	var $body = $('body');
+
 	/* launch bg slider */
 	var bgSlider = (function() {
 
@@ -116,6 +118,42 @@ $(function(){
 				dateFormat: 'dd-mm-yy'
 			});
 		};
+
+	})();
+
+
+	/*setup navbar and buttons*/
+	var navbar = (function() {
+
+		var $navbar = $('#navbar'),
+			$showNavbar = $('#show-navbar-btn'),
+			$hideNavbar = $('#hide-navbar-btn');
+
+		$showNavbar.on('click', showNavbar);
+
+		$hideNavbar.on('click', hideNavbar);
+
+		$body.on('click', function() {
+			$navbar.removeClass('navbar_opened');
+		});
+
+		$showNavbar.on('click', function(e) {
+			e.stopPropagation();
+		})
+
+		$navbar.on('click', function(e) {
+			e.stopPropagation();
+		})
+
+		function showNavbar(e) {
+			e.preventDefault();
+			$navbar.addClass('navbar_opened');
+		}
+
+		function hideNavbar(e) {
+			e.preventDefault();
+			$navbar.removeClass('navbar_opened');
+		}
 
 	})();
 

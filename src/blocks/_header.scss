@@ -6,12 +6,43 @@
 
 	&__logo-wrap {
 		display: table-cell;
-		width: 250px;
+		width: 249px;
 		vertical-align: middle;
 	}
 
 	&__menu-wrap {
 		display: table-cell;
 		vertical-align: middle;
+	}
+
+	&__navbar-btn-wrap {
+		display: none;
+		
+		@include breakpoint(max-width 1300px) {
+			display: block;
+			@include clearfix();
+
+		}
+	}
+
+	&__navbar-btn {
+		display: block;
+		float: right;
+		width: 25px;
+
+		span {
+			display: block;
+			height: 2px;
+			width: 100%;
+			background: $main;
+			margin: 6px 0;
+		}
+
+		&:hover,
+		&:focus {
+			span {
+				background: $brand;
+			}
+		}
 	}
 }

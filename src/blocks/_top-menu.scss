@@ -1,9 +1,23 @@
 .top-menu {
 	text-align: right;
 
+	@include breakpoint(max-width 1300px) {
+		text-align: left;
+	}
+
 	&__item {
 		display: inline-block;
 		margin-right: -4px;
+
+		@include breakpoint(max-width 1300px) {
+			display: block;
+			margin: 0;
+			margin-bottom: 3px;
+
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
 	}
 
 	&__link {
@@ -12,6 +26,10 @@
 		font-weight: 300;
 		font-size: 1.077em;
 		line-height: 1.8em;
+
+		@include breakpoint(max-width 1300px) {
+			padding: 0;
+		}
 
 		&:hover,
 		&:focus {

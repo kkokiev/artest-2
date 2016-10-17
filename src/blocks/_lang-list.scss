@@ -1,6 +1,7 @@
 .lang-list {
 	@include clearfix();
 	list-style: none;
+	white-space: nowrap;
 
 	&__item {
 		display: inline-block;

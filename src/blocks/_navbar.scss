@@ -1,19 +1,121 @@
 .navbar {
-	display: table;
 	height: 100%;
-	width: 100%;
-	table-layout: fixed;
+
+	@include breakpoint(min-width 1300px) {
+		display: block !important;
+	}
+
+	@include breakpoint(max-width 1300px) {
+		position: fixed;
+		z-index: 1100;
+		top: 0;
+		right: 0;
+		width: 300px;
+		height: 100vh;
+		padding: 15px 10px;
+		overflow: hidden;
+		background: #edeae3;
+		@include transition(all, .3s, linear);
+		-webkit-transform: translateX(100%);
+		-moz-transform: translateX(100%);
+		-o-transform: translateX(100%);
+		transform: translateX(100%);
+	}
+
+	&_opened {
+		-webkit-transform: translateX(0);
+		-moz-transform: translateX(0);
+		-o-transform: translateX(0);
+		transform: translateX(0);
+	}
+
+	&__hide-btn-wrap{
+		display: none;
+		margin-bottom: 10px;
+		@include clearfix();
+
+		@include breakpoint(max-width 1300px) {
+			display: block;
+		}
+	}
+
+	&__hide-btn {
+		position: relative;
+		display: block;
+		float: right;
+		height: 25px;
+		width: 25px;
+		text-decoration: none;
+		overflow: hidden;
+
+		span {
+			position: absolute;
+			display: block;
+			height: 3px;
+			width: 25px;
+			background: $main;
+
+			&:first-child {
+				-webkit-transform: rotate(45deg);
+				-moz-transform: rotate(45deg);
+				-o-transform: rotate(45deg);
+				transform: rotate(45deg);
+				top: 10px;
+				left: -1px;
+			}
+
+			&:nth-child(2) {
+				-webkit-transform: rotate(-45deg);
+				-moz-transform: rotate(-45deg);
+				-o-transform: rotate(-45deg);
+				transform: rotate(-45deg);
+				top: 10px;
+				left: -1px;
+			}
+		}
+
+		&:hover,
+		&:focus {
+			span {
+				background: $brand;
+			}
+		}
+
+	}
+
+	&__inner-wrap {
+		display: table;
+		height: 100%;
+		width: 100%;
+		table-layout: fixed;
+		overflow-y: scroll;
+
+		@include breakpoint(max-width 1300px) {
+			display: block;
+		}
+	}
 
 	&__main-menu-wrap {
 		display: table-cell;
-		width: 57.7%;
+		width: 59%;
 		vertical-align: middle;
+
+		@include breakpoint(max-width 1300px) {
+			display: block;
+			width: 100%;
+			margin-bottom: 15px;
+		}
 	}
 
 	&__top-menu-wrap {
 		display: table-cell;
-		width: 42.3%;
+		width: 41%;
 		vertical-align: middle;
+
+		@include breakpoint(max-width 1300px) {
+			display: block;
+			width: 100%;
+		}
 	}
 
 	&__top-menu-row {
@@ -21,18 +123,35 @@
 		height: 100%;
 		width: 100%;
 		table-layout: fixed;
+
+		@include breakpoint(max-width 1300px) {
+			display: block;
+			height: auto;
+		}
 	}
 
 	&__top-menu-col-1 {
 		display: table-cell;
-		width: 26%;
+		width: 20%;
 		vertical-align: middle;
+
+		@include breakpoint(max-width 1300px) {
+			display: block;
+			width: 100%;
+			margin-bottom: 15px;
+		}
 	}
 
 	&__top-menu-col-2 {
 		display: table-cell;
-		width: 74%;
+		width: 80%;
 		vertical-align: middle;
 		padding-left: 12px;
+
+		@include breakpoint(max-width 1300px) {
+			display: block;
+			width: 100%;
+			padding-left: 0;
+		}
 	}
 }
