@@ -40,7 +40,7 @@ var handler = function(){
 	
 	var height_footer = $('footer').height();
 	var height_header = $('header').height();
-	$('.content').css({'padding-bottom':height_footer+40, 'padding-top':height_header+40});
+	$('.content').css({'padding-bottom':height_footer, 'padding-top':height_header+25});
 	
 	
 	var viewport_wid = viewport().width;
@@ -97,7 +97,9 @@ $(function(){
 		var $el = $('.styled');
 
 		if($el.length){
-			$el.styler();
+			$el.styler({
+				selectVisibleOptions: 3
+			});
 		};
 
 

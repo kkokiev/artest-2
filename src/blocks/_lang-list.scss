@@ -1,0 +1,29 @@
+.lang-list {
+	@include clearfix();
+	list-style: none;
+
+	&__item {
+		display: inline-block;
+		margin-right: -4px;
+	}
+
+	&__link {
+		display: inline-block;
+		width: 27px;
+		font-size: 1.077em;
+		line-height: 1.8em;
+		font-weight: 300;
+		text-align: center;
+
+		&:hover,
+		&:focus {
+			text-decoration: underline;
+		}
+	}
+
+	&__item.active {
+		.lang-list__link {
+			border: 1px solid #b8b6b4;
+		}
+	}
+}

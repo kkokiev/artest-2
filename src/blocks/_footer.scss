@@ -1,5 +1,6 @@
 .footer {
 	@include clearfix();
+	padding-top: 7px;
 	padding-bottom: 26px;
 
 	&__left-col {

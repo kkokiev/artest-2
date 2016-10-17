@@ -1,0 +1,23 @@
+.logo {
+	width: 206px;
+
+	&__body {
+		margin: 0;
+		font-size: 2em;
+	}
+
+	&__link {
+		display: block;
+		height: 0;
+		padding-bottom: 24%;
+		overflow: hidden;
+		text-indent: -9999px;
+		background-image: url(../img/logo.png);
+		@include bg-image(transparent, left top, cover);
+
+		&:hover,
+		&:focus {
+			opacity: .7;
+		}
+	}
+}

@@ -25,17 +25,17 @@
 
 	&__input:hover + label,
 	&__input:focus + label {
-		background: rgba(#aa4141, .5);
+		background: rgba($brand, .5);
 	}
 
 	&__input:checked + label {
 		color: $light;
-		background: #aa4141;
+		background: $brand;
 	}
 	
 	&__input:checked:hover + label,
 	&__input:checked:focus + label {
-		background: darken(#aa4141, 20%);
+		background: darken($brand, 20%);
 	}
 
 	// checkbox aspect 

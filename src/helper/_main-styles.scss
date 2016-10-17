@@ -71,6 +71,7 @@ h4, h5, h6 {
 }
 
 a {
+	color: $main;
 	@include transition(all, .3s, ease-in);
 }
 
@@ -98,8 +99,8 @@ header{
 	text-align:left;
 	position:absolute;
 	left:0px; top:0px;
-	z-index:1000;}
-	
+	z-index:1000;
+}
 
 
 /*

@@ -1,0 +1,17 @@
+.header {
+	display: table;
+	width: 100%;
+	table-layout: fixed;
+	padding: 20px 0;
+
+	&__logo-wrap {
+		display: table-cell;
+		width: 250px;
+		vertical-align: middle;
+	}
+
+	&__menu-wrap {
+		display: table-cell;
+		vertical-align: middle;
+	}
+}

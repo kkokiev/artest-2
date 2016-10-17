@@ -48,7 +48,7 @@
 
 		&:hover,
 		&:focus {
-			background: #aa4141;
+			background: $brand;
 
 			[class*='icon-'] {
 				color: $light;

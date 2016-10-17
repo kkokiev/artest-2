@@ -1,0 +1,32 @@
+.main-nav-list {
+	list-style: none;
+	@include clearfix();
+
+	&__item {
+		float: left;
+
+		&:last-child {
+			margin-right: 0;
+		}
+	}
+
+	&__link {
+		display: inline-block;
+		padding: 0 15px;
+		vertical-align: top;
+		font-size: 1.385em;
+		line-height: 1.2em;
+		font-weight: 300;
+
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+
+	&__item.active {
+
+		.main-nav-list__link {
+			color: $brand;
+		}
+	}
+}

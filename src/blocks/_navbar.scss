@@ -1,0 +1,38 @@
+.navbar {
+	display: table;
+	height: 100%;
+	width: 100%;
+	table-layout: fixed;
+
+	&__main-menu-wrap {
+		display: table-cell;
+		width: 57.7%;
+		vertical-align: middle;
+	}
+
+	&__top-menu-wrap {
+		display: table-cell;
+		width: 42.3%;
+		vertical-align: middle;
+	}
+
+	&__top-menu-row {
+		display: table;
+		height: 100%;
+		width: 100%;
+		table-layout: fixed;
+	}
+
+	&__top-menu-col-1 {
+		display: table-cell;
+		width: 26%;
+		vertical-align: middle;
+	}
+
+	&__top-menu-col-2 {
+		display: table-cell;
+		width: 74%;
+		vertical-align: middle;
+		padding-left: 12px;
+	}
+}
