@@ -31,11 +31,17 @@
 
 	&__hide-btn-wrap{
 		display: none;
+		margin-top: 5px;
 		margin-bottom: 10px;
 		@include clearfix();
 
 		@include breakpoint(max-width 1300px) {
 			display: block;
+			margin-right: 20px;
+		}
+
+		@include breakpoint(max-width 600px) {
+			margin-right: 0;
 		}
 	}
 

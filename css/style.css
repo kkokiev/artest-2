@@ -248,11 +248,24 @@ a {
 header {
   width: 100%;
   min-width: 320px;
+  padding: 20px 0;
   text-align: left;
-  position: absolute;
+  position: fixed;
   left: 0px;
   top: 0px;
   z-index: 1100;
+}
+
+@media (max-width: 1300px) {
+  header {
+    padding: 10px 0;
+  }
+}
+
+#header.sticky {
+  padding: 10px 0;
+  background: #edeae3;
+  border-bottom: 1px solid #333;
 }
 
 /*
@@ -264,6 +277,18 @@ header {
   width: 100%;
   min-width: 320px;
   text-align: left;
+}
+
+.content_table {
+  display: table;
+  height: 100vh;
+  width: 100%;
+}
+
+.content__inner {
+  display: table-cell;
+  height: 100%;
+  vertical-align: middle;
 }
 
 /*
@@ -518,7 +543,6 @@ footer {
   display: table;
   width: 100%;
   table-layout: fixed;
-  padding: 20px 0;
 }
 
 .header__logo-wrap {
@@ -773,6 +797,7 @@ footer {
 
 .navbar__hide-btn-wrap {
   display: none;
+  margin-top: 5px;
   margin-bottom: 10px;
 }
 
@@ -789,6 +814,13 @@ footer {
 @media (max-width: 1300px) {
   .navbar__hide-btn-wrap {
     display: block;
+    margin-right: 20px;
+  }
+}
+
+@media (max-width: 600px) {
+  .navbar__hide-btn-wrap {
+    margin-right: 0;
   }
 }
 
@@ -1136,6 +1168,12 @@ footer {
   margin-bottom: 56px;
 }
 
+@media (max-width: 768px) {
+  .order-form__input-box {
+    margin-bottom: 25px;
+  }
+}
+
 .order-form__row {
   margin-bottom: 16px;
 }
@@ -1175,6 +1213,22 @@ footer {
   }
 }
 
+.order-form__options-box {
+  margin-bottom: 40px;
+}
+
+@media (max-width: 768px) {
+  .order-form__options-box {
+    margin-bottom: 25px;
+  }
+}
+
+@media (max-width: 1000px) {
+  .order-form__submit-box {
+    padding-bottom: 15px;
+  }
+}
+
 .order-form__date-col {
   float: left;
   width: 50%;
@@ -1188,10 +1242,6 @@ footer {
   .order-form__date-col:last-child {
     margin-bottom: 0;
   }
-}
-
-.order-form__options-box {
-  margin-bottom: 40px;
 }
 
 .order-form__option-title {

@@ -12,6 +12,10 @@
 
 	&__input-box {
 		margin-bottom: 56px;
+
+		@include breakpoint(max-width 768px) {
+			margin-bottom: 25px;
+		}
 	}
 
 	&__row {
@@ -43,6 +47,20 @@
 		}
 	}
 
+	&__options-box {
+		margin-bottom: 40px;
+
+		@include breakpoint(max-width 768px) {
+			margin-bottom: 25px;
+		}
+	}
+
+	&__submit-box {
+		@include breakpoint(max-width 1000px) {
+			padding-bottom: 15px;
+		}
+	}
+
 	&__date-col {
 		float: left;
 		width: 50%;
@@ -55,10 +73,6 @@
 				margin-bottom: 0;
 			}
 		}
-	}
-
-	&__options-box {
-		margin-bottom: 40px;
 	}
 
 	&__option-title {

@@ -59,7 +59,7 @@ $(function(){
 
 	var $body = $('body');
 
-	/* launch bg slider */
+	/* setup bg slider */
 	var bgSlider = (function() {
 
 		var $el = $('.js-bg-slider');
@@ -78,7 +78,7 @@ $(function(){
 	})();
 
 
-	/*setup gallery*/
+	/* setup gallery */
 	var gallery = (function() {
 
 		var $el = $('.js-gallery-item-img');
@@ -93,7 +93,7 @@ $(function(){
 	})();
 
 
-	/*setup styler*/
+	/* setup styler */
 	var styledForms = (function() {
 
 		var $el = $('.styled');
@@ -108,7 +108,7 @@ $(function(){
 	})();
 
 
-	/*setup jq-ui datepicker*/
+	/* setup jq-ui datepicker */
 	var orderDatePicker = (function() {
 
 		var $el = $('.js-input-grp__date');
@@ -122,7 +122,7 @@ $(function(){
 	})();
 
 
-	/*setup navbar and buttons*/
+	/* setup navbar show/hide buttons */
 	var navbar = (function() {
 
 		var $navbar = $('#navbar'),
@@ -139,11 +139,11 @@ $(function(){
 
 		$showNavbar.on('click', function(e) {
 			e.stopPropagation();
-		})
+		});
 
 		$navbar.on('click', function(e) {
 			e.stopPropagation();
-		})
+		});
 
 		function showNavbar(e) {
 			e.preventDefault();
@@ -156,6 +156,39 @@ $(function(){
 		}
 
 	})();
+
+
+	/* setup sticky header */
+	var stickyHeader = (function(){
+
+		var $el = $('#header'),
+			headerHeight = $el.height(); 
+
+		if($el.length){
+
+			$(window).scroll(function() {
+				setStickyClass();
+			});
+
+			$(window).load(function() {
+				setStickyClass();
+			});
+
+		};
+
+		function setStickyClass() {
+			var $scroll = $(window).scrollTop();
+
+			if ($scroll >= headerHeight) {
+				$el.addClass("sticky");
+			} else {
+				$el.removeClass("sticky");
+			}
+		}
+
+	})();
+
+
 
 
 });
