@@ -94,7 +94,7 @@
 		height: 100%;
 		width: 100%;
 		table-layout: fixed;
-		overflow-y: scroll;
+		overflow-y: auto;
 
 		@include breakpoint(max-width 1300px) {
 			display: block;
@@ -103,7 +103,7 @@
 
 	&__main-menu-wrap {
 		display: table-cell;
-		width: 59%;
+		width: 58%;
 		vertical-align: middle;
 
 		@include breakpoint(max-width 1300px) {
@@ -115,7 +115,7 @@
 
 	&__top-menu-wrap {
 		display: table-cell;
-		width: 41%;
+		width: 42%;
 		vertical-align: middle;
 
 		@include breakpoint(max-width 1300px) {
