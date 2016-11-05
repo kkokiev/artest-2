@@ -1,1 +1,1 @@
-<h2>Test task with a very special style requirements</h2>
+<h2>Test task with a very special requirements</h2>
